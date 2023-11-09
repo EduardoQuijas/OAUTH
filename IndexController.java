@@ -126,7 +126,7 @@ public class IndexController {
             OAuth.Account oauthAccount = account.orElseThrow(() -> new NoSuchElementException(ERROR_ACCOUNT_NOT_FOUND));
             session.setAccountId(oauthAccount.getAccountId());
             session.setAccountName(oauthAccount.getAccountName());
-            // TODO set this more efficiently with more APIs as they're added in
+            
             String basePath = this.getBaseUrl(oauthAccount) + "/restapi";
             session.setBasePath(basePath);
         }
